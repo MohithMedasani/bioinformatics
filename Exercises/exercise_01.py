@@ -20,17 +20,15 @@ def hello():
     :return: None
     """
     return
-
-
 hello()
 
 
 def percent_decimal(i):
     if i > 1:
-        i = i/100
+        i=float(i)/100
         print(i)
     else:
-        i = i * 100
+        i=float(i)*100
         print(i)
 
     """
@@ -39,9 +37,9 @@ def percent_decimal(i):
     :return: a float between 0 and 100
     """
 
-    return
+    return(i)
 
-percent_decimal(0.1)
+print(percent_decimal(0.2))
 
 
 def exponent(integer, power):
@@ -49,17 +47,15 @@ def exponent(integer, power):
     power = power - 1
     for i in range(power):
         integer = integer * var
-    print(integer)
     """
     Using a loop (no imports!), raise the integer given to the power provided. (integer^power)
     :param integer: a positive, non zero, integer
     :param power: a positive, non zero, integer
     :return: an integer
     """
-    return (integer, power)
+    return (integer)
 
-
-exponent(2, 5)
+print(exponent(2,5))
 
 
 def complement(dna):
@@ -74,7 +70,7 @@ def complement(dna):
         elif s == "G":
             temp_string += 'C'
         else:
-            temp_string += s
+            print('You entered the alphabet not mentioned')
 
     return temp_string
 
@@ -84,4 +80,4 @@ def complement(dna):
     :return: String containing only C, T, A, and G
     """
 
-print(complement('CTAG'))
+print(complement('BCTAG'))
