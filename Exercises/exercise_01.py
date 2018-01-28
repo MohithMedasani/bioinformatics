@@ -16,7 +16,7 @@ By the end of class on Thursday 1/25, students should have:
 def hello():
     print("Hello world")
     """
-    Prints "Hello World"
+    Print "Hello World"
     :return: None
     """
     return
@@ -27,7 +27,7 @@ hello()
 
 def percent_decimal(i):
     if i > 1:
-        i = i / 100
+        i = i/100
         print(i)
     else:
         i = i * 100
@@ -39,10 +39,9 @@ def percent_decimal(i):
     :return: a float between 0 and 100
     """
 
-    return i
+    return
 
-
-percent_decimal(0.2)
+percent_decimal(0.1)
 
 
 def exponent(integer, power):
@@ -64,17 +63,20 @@ exponent(2, 5)
 
 
 def complement(dna):
-    temp_string = " "
+    temp_string = ''
     for s in dna:
-        if s == "C":
-            temp_string += str('G')
+        if s == 'C':
+            temp_string += 'G'
         elif s == "A":
-            temp_string += str('T')
+            temp_string += 'T'
         elif s == "T":
-            temp_string += str('A')
+            temp_string += 'A'
+        elif s == "G":
+            temp_string += 'C'
         else:
-            temp_string += str('C')
-            return (temp_string)
+            temp_string += s
+
+    return temp_string
 
     """
     Returns the complement strand of DNA to the input.  C <--> G,  A <--> T
