@@ -55,7 +55,7 @@ def exponent(integer, power):
     """
     return (integer)
 
-print(exponent(2,5))
+print(exponent(2,6))
 
 
 def complement(dna):
@@ -80,4 +80,4 @@ def complement(dna):
     :return: String containing only C, T, A, and G
     """
 
-print(complement('BCTAG'))
+print(complement('CTAG'))
