@@ -6,7 +6,7 @@ exercise_02
 
 def first_elements(my_list, n):
 
-    n=my_list[:n]
+    x=my_list[:n]
 
     """"
     returns the first n elements in a list.
@@ -16,7 +16,7 @@ def first_elements(my_list, n):
     :return: a list of length n
     """
 
-    return n
+    return x
 
 result=first_elements([0,1,2,3,3],4)
 print(result)
