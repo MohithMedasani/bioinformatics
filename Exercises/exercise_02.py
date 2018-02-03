@@ -33,7 +33,7 @@ def first_element(my_list, n):
     :return: a list of length n
     """
 
-    return my_list[n:]
+    return t
 
 result2=first_element([0,1,2,3,4],3)
 
