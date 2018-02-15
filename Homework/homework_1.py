@@ -186,12 +186,12 @@ print(fasta_seqs('tricky_fasta.fasta'))
 
 def fasta_headers(file_name):
     with open('tricky_fasta.fasta','r') as infile:
-        header = set()
+        header = []
         text = infile.read()
         seqs = text.split('>')
         for seq in seqs:
             x = seq.split('\n', 1)
-            header.add(x[0])
+            header.append(x[0])
 
 
     """
