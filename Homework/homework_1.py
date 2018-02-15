@@ -307,8 +307,8 @@ def translate(rna):
     temp_str=" "
     x=len(rna)
     for i in range(0,x,3):
-      t =RNA_CODON_TABLE[rna[i:i+3]]
-        if t== "*" :
+        t =RNA_CODON_TABLE[rna[i:i+3]]
+        if t== " * " :
             temp_str=temp_str
         else:
             temp_str += t
