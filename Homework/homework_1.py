@@ -222,8 +222,11 @@ def fasta_dict(file_name):
 print(fasta_dict('tricky_fasta.fasta'))
 
 def fastq_to_fasta(file_name, new_name=None):
-
-
+    with open('proper_fastq.fastq', 'r') as infile:
+        txt = infile.read ()
+        f = open('proper_fastq.fasta', 'w')
+        f.write(txt)
+        f.close()
     """
     Reads in a FASTQ file and writes it to a new FASTA file. This definition should also
     keep the same file name and change the extension to from .fastq to .fasta if new_name is not specified.
@@ -233,6 +236,7 @@ def fastq_to_fasta(file_name, new_name=None):
     :return: None
     """
     return
+print_even(" , ")
 
 # Transcription and Translation
 def reverse_complement(dna):
@@ -300,8 +304,20 @@ def translate(rna):
            "GAU": "D", "GAC": "D", "GAA": "E", "GAG": "E",
            "GGU": "G", "GGC": "G", "GGA": "G", "GGG": "G"}
 
+    temp_str=" "
+    x=len(rna)
+    for i in range(0,x,3):
+      t =RNA_CODON_TABLE[rna[i:i+3]]
+        if t== "*" :
+            temp_str=temp_str
+        else:
+            temp_str += t
 
-    return
+    return temp_str
+
+print(translate('CTAGGFFHH'))
+
+
 
 def reading_frames(dna):
 
