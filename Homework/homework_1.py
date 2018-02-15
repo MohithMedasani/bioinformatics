@@ -156,8 +156,8 @@ def get_csv_column(file_name, column):
             x = infile.readlines()
             list = []
             for s in x:
-                c = s.split(',')
-                list.append(c[column])
+                y = s.split(',')
+                list.append(y[column])
     """
     Reads in a CSV file and returns a list of values belonging to the column specified
     :param file_name: a string
