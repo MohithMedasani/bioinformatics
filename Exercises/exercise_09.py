@@ -54,13 +54,14 @@ def first():
     return [x ** 2 for x in range(10000000)]
 first()
 
+@time_decorator
 def for_loop():
     new_list = []
     for i in range(1000000):
         new_list.append(i)
 for_loop()
 
-
+@time_decorator
 def for_loop_log():
     new_list = []
     for i in range(1000000):
@@ -68,46 +69,47 @@ def for_loop_log():
             new_list.append(math.log10(i))
 for_loop_log()
 
-
+@time_decorator
 def list_comp():
     numbers = [i for i in range(1000000)]
 list_comp()
 
+@time_decorator
 def list_com_log():
     numbers = [x for x in range (1, 1000000)]
     return [math.log10(x) for x in numbers]
 list_com_log()
 
-
+@time_decorator
 def numpy_list():
     array = numpy.arange(1,1000000)
 numpy_list()
 
-
+@time_decorator
 def numpy_list_log():
     array = numpy.arange(1,1000000)
     temp = numpy.log10(array)
 numpy_list_log()
 
-
+@time_decorator
 def pandas_list():
     array = numpy.arange(1, 1000000)
     array_2 = pandas.DataFrame(array)
 pandas_list()
 
-
+@time_decorator
 def pandas_list_log():
     array = numpy.arange(1, 1000000)
     temp = numpy.log10(array)
     array_2 = pandas.DataFrame(temp)
 pandas_list_log()
 
-
+@time_decorator
 def generator_list():
     new_list = (i for i in range(1000000))
 generator_list()
 
-
+@time_decorator
 def generator_list_log():
     numbers = (x for x in range (1, 1000000))
     return (math.log10(x) for x in numbers)
